@@ -20,8 +20,8 @@ environments {
             dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
             driverClassName = "org.postgresql.Driver"
 			dialect = "org.hibernate.dialect.PostgreSQLDialect"
-			username = "sandra"
-			password = "sandra"
+			username = "postgres"
+			password = ""
         }
     }
     test {

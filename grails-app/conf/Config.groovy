@@ -88,11 +88,12 @@ log4j = {
            'org.springframework',
            'org.hibernate',
            'net.sf.ehcache.hibernate'
+    debug  'net.kaleidos.plugins.admin'
 }
 
 // Uncomment and edit the following lines to start using Grails encoding & escaping improvements
 
-/* remove this line 
+/* remove this line
 // GSP settings
 grails {
     views {
@@ -113,3 +114,27 @@ grails {
     }
 }
 remove this line */
+
+
+// Added by the Spring Security Core plugin:
+grails.plugin.springsecurity.active = true
+grails.plugin.springsecurity.userLookup.userDomainClassName = 'conferences.User'
+grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'conferences.UserRole'
+grails.plugin.springsecurity.authority.className = 'conferences.Role'
+
+grails.plugin.springsecurity.securityConfigType = "Annotation"
+
+grails.plugin.springsecurity.controllerAnnotations.staticRules = [
+    '/':                              ['permitAll'],
+    '/index':                         ['permitAll'],
+    '/index.gsp':                     ['permitAll'],
+    '/**/js/**':                      ['permitAll'],
+    '/**/css/**':                     ['permitAll'],
+    '/**/images/**':                  ['permitAll'],
+    '/**/favicon.ico':                ['permitAll']
+]
+
+
+grails.plugin.admin.domains = ["conferences.Attendee"]
+grails.plugin.admin.access_root = "/ddd"
+

@@ -3,6 +3,9 @@ class UrlMappings {
     static mappings = {
         name "index": "/" {controller="conference"; action="index"}
 
+        name "login": "/login/auth" {controller="login"; action="auth"}
+        name "loginDenied": "/login/denied" {controller="login"; action="denied"}
+
         name "listConferences": "/listConferences" {controller="conference"; action="list"}
         name "descriptionConference": "/description/$id" {controller="conference"; action="description"}
         name "addConference": "/add" {controller="conference"; action=[GET:"showAdd", POST:"add"]}
