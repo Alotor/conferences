@@ -89,6 +89,7 @@ log4j = {
            'org.hibernate',
            'net.sf.ehcache.hibernate'
     debug  'net.kaleidos.plugins.admin'
+    //debug  'grails.plugin.springsecurity', 'org.springframework.security'
 }
 
 // Uncomment and edit the following lines to start using Grails encoding & escaping improvements
