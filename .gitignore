@@ -31,3 +31,8 @@
 
 *.class
 *.log
+
+.settings
+.project
+.classpath
+target-eclipse

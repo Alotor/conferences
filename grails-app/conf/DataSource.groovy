@@ -16,12 +16,8 @@ hibernate {
 environments {
     development {
         dataSource {
-			url = "jdbc:postgresql://localhost:5432/conferences"
-            dbCreate = "update" // one of 'create', 'create-drop', 'update', 'validate', ''
-            driverClassName = "org.postgresql.Driver"
-			dialect = "org.hibernate.dialect.PostgreSQLDialect"
-			username = "postgres"
-			password = ""
+            dbCreate = "update"
+            url = "jdbc:h2:mem:conferences;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE"
         }
     }
     test {

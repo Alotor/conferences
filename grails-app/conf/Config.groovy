@@ -138,15 +138,8 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 
 grails.plugin.admin.domains = {
     "conferences.Room"()
-    "conferences.Attendee" [
-        list: [
-            exclude: ['attendeeService']
-        ]
-    ]
-
-    "conferences.Conference" [
-        adminClass: "conferences.ConferenceAdmin"
-    ]
+    "conferences.Attendee" list: [exclude: ['attendeeService']]
+    "conferences.Conference" adminClass: "conferences.ConferenceAdmin"
 }
 
 grails.plugin.admin.access_root = "/ddd"
