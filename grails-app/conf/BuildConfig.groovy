@@ -63,6 +63,9 @@ grails.project.dependency.resolution = {
 
         compile ":spring-security-core:2.0-RC2"
 
+        grails.plugins.springsecurity.useBasicAuth = true
+        grails.plugins.springsecurity.basic.realmName = "Conferences"
+
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"

@@ -123,6 +123,15 @@ grails.plugin.springsecurity.userLookup.userDomainClassName = 'conferences.User'
 grails.plugin.springsecurity.userLookup.authorityJoinClassName = 'conferences.UserRole'
 grails.plugin.springsecurity.authority.className = 'conferences.Role'
 
+
+grails.plugin.springsecurity.useBasicAuth = true
+grails.plugin.springsecurity.basic.realmName = "Conferences"
+
+grails.plugin.springsecurity.filterChain.chainMap = [
+   '/ddd/api/**': 'JOINED_FILTERS,-exceptionTranslationFilter',
+   '/**': 'JOINED_FILTERS,-basicAuthenticationFilter,-basicExceptionTranslationFilter'
+]
+
 grails.plugin.springsecurity.securityConfigType = "Annotation"
 
 grails.plugin.springsecurity.controllerAnnotations.staticRules = [

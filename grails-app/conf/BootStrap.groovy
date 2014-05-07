@@ -18,6 +18,10 @@ class BootStrap {
         if (!userRole) {
             new UserRole(user:user, role:role).save()
         }
+
+        10.times {
+            new Attendee(name:"Attendee$it").save()
+        }
     }
 
     def destroy = {
