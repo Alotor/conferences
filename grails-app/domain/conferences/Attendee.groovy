@@ -10,5 +10,6 @@ class Attendee {
     }
 
     static constraints = {
+        name nullable:false, blank: false
     }
 }
