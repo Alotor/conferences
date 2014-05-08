@@ -127,8 +127,10 @@ grails.plugin.springsecurity.authority.className = 'conferences.Role'
 grails.plugin.springsecurity.useBasicAuth = true
 grails.plugin.springsecurity.basic.realmName = "Conferences"
 
+def base = "myadmin"
+
 grails.plugin.springsecurity.filterChain.chainMap = [
-   '/ddd/api/**': 'JOINED_FILTERS,-exceptionTranslationFilter',
+   "/$base/api/**": 'JOINED_FILTERS,-exceptionTranslationFilter',
    '/**': 'JOINED_FILTERS,-basicAuthenticationFilter,-basicExceptionTranslationFilter'
 ]
 
@@ -144,12 +146,17 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/**/favicon.ico':                ['permitAll']
 ]
 
+grails.plugin.admin.access_root = "/$base"
 
-grails.plugin.admin.domains = {
-    "conferences.Room"()
-    "conferences.Attendee" list: [exclude: ['attendeeService']]
-    "conferences.Conference" adminClass: "conferences.ConferenceAdmin"
+grails.plugin.admin.domains = [
+    "conferences.Room",
+    "conferences.Attendee",
+    "conferences.Conference"
+]
+
+grails.plugin.admin.domain.Attendee = {
+    list exclude: ['attendeeService']
 }
 
-grails.plugin.admin.access_root = "/ddd"
+grails.plugin.admin.domain.Conference = "conferences.ConferenceAdmin"
 
