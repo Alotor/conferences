@@ -21,7 +21,15 @@ class BootStrap {
 
         10.times {
             new Attendee(name:"Attendee$it").save()
+            def room = new Room(name:"Room$it")
+            room.save()
+            def speaker = new Speaker(name:"Speaker$it", birthDate:"01/01/1970")
+            speaker.save()
+            new Talk(name:"Talk$it", talkDate:"05/05/2015", talkTime:"12:00", speaker:speaker, room:room).save()
+
         }
+
+
     }
 
     def destroy = {
