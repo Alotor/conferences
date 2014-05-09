@@ -11,4 +11,8 @@ class Talk {
     static constraints = {
         room nullable:true
     }
+
+    String toString(){
+        return name
+    }
 }

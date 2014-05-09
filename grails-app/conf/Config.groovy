@@ -151,7 +151,8 @@ grails.plugin.admin.access_root = "/$base"
 grails.plugin.admin.domains = [
     "conferences.Room",
     "conferences.Attendee",
-    "conferences.Conference"
+    "conferences.Conference",
+    "conferences.Talk",
 ]
 
 grails.plugin.admin.domain.Attendee = {
@@ -161,4 +162,3 @@ grails.plugin.admin.domain.Attendee = {
 }
 
 grails.plugin.admin.domain.Conference = "conferences.ConferenceAdmin"
-
