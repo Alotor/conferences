@@ -140,6 +140,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/':                              ['permitAll'],
     '/index':                         ['permitAll'],
     '/index.gsp':                     ['permitAll'],
+    '/**/libs/**':                      ['permitAll'],
     '/**/js/**':                      ['permitAll'],
     '/**/css/**':                     ['permitAll'],
     '/**/images/**':                  ['permitAll'],
@@ -157,8 +158,12 @@ grails.plugin.admin.domains = [
 
 grails.plugin.admin.domain.Attendee = {
     list excludes: ['attendeeService']
-    create excludes: ['attendeeService']
-    edit excludes: ['attendeeService']
+    create(
+        excludes: ['attendeeService']
+    )
+    edit(
+        excludes: ['attendeeService']
+    )
 }
 
 grails.plugin.admin.domain.Conference = "conferences.ConferenceAdmin"
