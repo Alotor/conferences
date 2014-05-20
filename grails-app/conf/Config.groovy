@@ -154,16 +154,7 @@ grails.plugin.admin.domains = [
     "conferences.Attendee",
     "conferences.Conference",
     "conferences.Talk",
+    "conferences.Speaker",
 ]
-
-grails.plugin.admin.domain.Attendee = {
-    list excludes: ['attendeeService']
-    create(
-        excludes: ['attendeeService']
-    )
-    edit(
-        excludes: ['attendeeService']
-    )
-}
 
 grails.plugin.admin.domain.Conference = "conferences.ConferenceAdmin"
