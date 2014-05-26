@@ -21,7 +21,7 @@ class BootStrap {
 
         10.times {
             new Attendee(name:"Attendee$it").save()
-            def room = new Room(name:"Room$it")
+            def room = new Room(name:"Room$it", photo:new File("/tmp/photo.jpg"))
             room.save()
             def speaker = new Speaker(name:"Speaker$it", birthDate:"01/01/1970")
             speaker.save()
