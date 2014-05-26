@@ -9,7 +9,7 @@ class MapWidget extends Widget {
         html.append("<div class='map-widget'>")
         html.append("<div>")
         html.append("<span class='map-container'>")
-        html.append("<iframe width='425' height='350' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'")
+        html.append("<iframe width='${internalAttrs.width?:425}' height='${internalAttrs.height?:350}' frameborder='0' scrolling='no' marginheight='0' marginwidth='0'")
         html.append("src='https://maps.google.com/maps?f=q&amp;q=${value}&amp;output=embed'")
         html.append("></iframe>")
         html.append("</span>")
