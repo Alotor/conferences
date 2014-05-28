@@ -75,6 +75,10 @@ grails.project.dependency.resolution = {
         //grails.plugins.springsecurity.useBasicAuth = true
         //grails.plugins.springsecurity.basic.realmName = "Conferences"
 
+        compile ':heroku:1.0.1'
+        compile ':cloud-support:1.0.8'
+
+
         // Uncomment these (or add new ones) to enable additional resources capabilities
         //runtime ":zipped-resources:1.0.1"
         //runtime ":cached-resources:1.1"
