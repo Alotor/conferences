@@ -147,7 +147,7 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
     '/**/favicon.ico':                ['permitAll']
 ]
 
-grails.plugin.admin.access_root = "/$base"
+grails.plugin.admin.accessRoot = "/$base"
 
 grails.plugin.admin.domains = [
     "conferences.Room",
