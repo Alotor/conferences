@@ -5,8 +5,14 @@ import org.springframework.security.access.annotation.Secured
 @Secured(['IS_AUTHENTICATED_ANONYMOUSLY'])
 class ConferenceController {
     def conferenceService
+    def grailsResourceLocator
 
     def index() {
+        String resource = "grails-admin/libs/lodash.js"
+        def tmp = grailsResourceLocator.findResourceForURI(resource).file.path
+        println tmp.substring(tmp.indexOf("work/")+4).replaceAll("web-app/","")
+        println tmp
+
         render view:"/conference/home", model:[]
     }
 

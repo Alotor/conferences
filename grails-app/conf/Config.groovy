@@ -163,8 +163,4 @@ grails.plugin.admin.domain.Attendee = {
     edit excludes: ['id']
 }
 
-grails.plugin.admin.domain.Room = {
-    edit includes: ['name', 'board']
-}
-
 grails.plugin.admin.domain.Conference = "conferences.ConferenceAdmin"

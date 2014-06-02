@@ -71,6 +71,7 @@ grails.project.dependency.resolution = {
         //runtime ":resources:1.2.7"
 
         compile ":spring-security-core:2.0-RC3"
+        //compile ":admin:0.1"
 
         //grails.plugins.springsecurity.useBasicAuth = true
         //grails.plugins.springsecurity.basic.realmName = "Conferences"
