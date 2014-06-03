@@ -149,14 +149,19 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
 
 grails.plugin.admin.accessRoot = "/$base"
 
-grails.plugin.admin.domains = [
+grails.plugin.admin.domains."Conference Management" = [
     "conferences.Conference",
+    "conferences.Talk"
+]
+
+grails.plugin.admin.domains."People" = [
     "conferences.Attendee",
-    "conferences.Talk",
-    "conferences.Speaker",
+    "conferences.Speaker"
+]
+
+grails.plugin.admin.domains."Infrastructures" = [
     "conferences.Building",
     "conferences.Room"
-
 ]
 
 grails.plugin.admin.domain.Attendee = {
