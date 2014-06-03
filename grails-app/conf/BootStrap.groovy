@@ -19,9 +19,19 @@ class BootStrap {
             new UserRole(user:user, role:role).save()
         }
 
+
+        def building1 = new Building(name:"Building1")
+        building1.save()
+        def building2 = new Building(name:"Building2")
+        building2.save()
+
         10.times {
             new Attendee(name:"Attendee$it").save()
-            def room = new Room(name:"Room$it", photo:new File("/tmp/photo.jpg"))
+            def building = building1
+            if (it%2) {
+                building = building2
+            }
+            def room = new Room(name:"Room$it", photo:new File("/tmp/photo.jpg"), building:building)
             room.save()
             def speaker = new Speaker(name:"Speaker$it", birthDate:"01/01/1970")
             speaker.save()

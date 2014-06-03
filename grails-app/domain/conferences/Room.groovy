@@ -7,9 +7,12 @@ class Room {
     Boolean board = false
     static hasMany=[talk:Talk]
 
+    Building building
+
     static constraints = {
         photo nullable:true
         roomNumber nullable:true
+        building nullable:false
         name validator: {val,obj->
             if (val.startsWith("A")) {
                 return false
