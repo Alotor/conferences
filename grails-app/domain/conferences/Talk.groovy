@@ -13,6 +13,8 @@ class Talk {
     static constraints = {
         room nullable:true
         speaker nullable:true
+        talkDate nullable:true
+        talkTime nullable:true
     }
 
     String toString(){

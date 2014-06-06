@@ -175,3 +175,12 @@ grails.plugin.admin.domain.Room = {
 }
 
 grails.plugin.admin.domain.Conference = "conferences.ConferenceAdmin"
+
+grails.plugin.admin.domain.Talk = {
+    edit excludes: ['name']
+    groups {
+        "Speaker" fields: [ 'speaker' ]
+        "Talk Info" style:"collapse", fields: [ 'talkDate', 'talkTime', 'room' ]
+    }
+}
+
